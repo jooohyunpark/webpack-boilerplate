@@ -2,22 +2,34 @@
 Boilerplate for webpack project.
 
 ## webpack
-```webpack webpack-cli webpack-dev-server```
+```
+webpack webpack-cli webpack-dev-server
+```
 
 ## plugins
-```clean-webpack-plugin html-webpack-plugin mini-css-extract-plugin```
+```
+clean-webpack-plugin html-webpack-plugin mini-css-extract-plugin
+```
 
 ## babel
-```@babel/core @babel/preset-env babel-loader```
+```
+@babel/core @babel/preset-env babel-loader
+```
 
 ## loaders
-```html-loader file-loader```
+```
+html-loader file-loader
+```
 
 ## scss & css
-```node-sass style-loader css-loader sass-loader```
+```
+node-sass style-loader css-loader sass-loader
+```
 
 ## linter & formatter
-```eslint eslint-config-prettier eslint-plugin-prettier prettier```
+```
+eslint eslint-config-prettier eslint-plugin-prettier prettier
+```
 
 ## all together
 ```
