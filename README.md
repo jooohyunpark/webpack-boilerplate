@@ -1,4 +1,4 @@
-# webpack-setup
+# webpack-boilerplate
 
 Boilerplate for webpack project.
 
