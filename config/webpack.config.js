@@ -9,7 +9,8 @@ module.exports = env => {
     mode: env.mode,
     devtool: 'inline-source-map',
     devServer: {
-      port: 3000
+      port: 3000,
+      hot: true
     },
     entry: {
       index: './src/index.js'
