@@ -58,7 +58,13 @@ module.exports = env => {
             }
           }
         },
-
+        {
+          test: /\.css$/i,
+          use:
+            env.mode === 'production'
+              ? [MiniCssExtractPlugin.loader, 'css-loader']
+              : ['style-loader', 'css-loader']
+        },
         {
           test: /\.s[ac]ss$/i,
           use:
