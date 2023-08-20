@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
 
 module.exports = env => {
@@ -40,7 +41,11 @@ module.exports = env => {
         template: './src/index.html',
         filename: 'index.html',
         chunks: ['index']
-      })
+      }),
+      env.mode === 'production' &&
+        new CopyPlugin({
+          patterns: [{ from: 'public', to: '', noErrorOnMissing: true }]
+        })
     ],
     module: {
       rules: [
